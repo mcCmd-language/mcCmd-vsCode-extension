@@ -1,0 +1,87 @@
+{
+	"scopeName": "source.mccmd",
+	"patterns": [
+	  {
+		"name": "variable.declaration.mccmd",
+		"match": "(?<=@\\s)\\w+(?=\\s*\\[)",
+		"captures": {
+		  "0": { "name": "variable.name.mccmd" }
+		}
+	  },
+	  {
+		"name": "variable.usage.mccmd",
+		"match": "@\\w+\\*",
+		"captures": {
+		  "0": { "name": "variable.mccmd" }
+		}
+	  },
+	  {
+		"name": "function.declaration.mccmd",
+		"match": "@\\s*/(\\w+)",
+		"captures": {
+		  "1": { "name": "entity.name.function.mccmd" }
+		}
+	  },
+	  {
+		"name": "function.call.mccmd",
+		"match": "/(\\w+)",
+		"captures": {
+		  "1": { "name": "entity.name.function.mccmd" }
+		}
+	  },
+	  {
+		"name": "string.mccmd",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "variable.usage.mccmd",
+			"match": "@\\w+\\*",
+			"captures": {
+			  "0": { "name": "variable.mccmd" }
+			}
+		  }
+		]
+	  },
+	  {
+		"name": "keyword.mccmd",
+		"match": "\\b(@|/)\\b",
+		"captures": {
+		  "0": { "name": "keyword.control.mccmd" }
+		}
+	  },
+	  {
+		"name": "type.mccmd",
+		"match": "\\b(int|string|float|double|array|json|bool)\\b",
+		"captures": {
+		  "0": { "name": "support.type.mccmd" }
+		}
+	  },
+	  {
+		"name": "number.mccmd",
+		"match": "\\b\\d+\\b",
+		"captures": {
+		  "0": { "name": "constant.numeric.mccmd" }
+		}
+	  },
+	  {
+		"name": "boolean.mccmd",
+		"match": "\\b(true|false)\\b",
+		"captures": {
+		  "0": { "name": "constant.language.boolean.mccmd" }
+		}
+	  },
+	  {
+		"name": "comment.mccmd",
+		"match": "##.*$",
+		"captures": {
+		  "0": { "name": "comment.line.double-slash.mccmd" }
+		}
+	  }
+	],
+	"fileTypes": [
+	  "mcCmd"
+	],
+	"uuid": "37f205e3-5a71-4d6a-aeef-17e8c3b1b9ef"
+  }
+  

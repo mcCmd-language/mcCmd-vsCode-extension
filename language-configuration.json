@@ -1,0 +1,42 @@
+// language-configuration.json
+{
+    "comments": {
+      "lineComment": "##"
+    },
+    "brackets": [
+      ["#", "#"],
+      ["[", "]"],
+      ["(", ")"]
+    ],
+    "autoClosingPairs": [
+      {
+        "open": "#",
+        "close": "#"
+      },
+      {
+        "open": "[",
+        "close": "]"
+      },
+      {
+        "open": "(",
+        "close": ")"
+      },
+      {
+        "open": "\"",
+        "close": "\"",
+        "notIn": ["string.quoted.double.mccmd"]
+      }
+    ],
+    "semanticTokenColors": {
+      "variable.name.mccmd": "#0000FF",
+      "variable.mccmd": "#0000FF",
+      "entity.name.function.mccmd": "#FFFF00",
+      "string.quoted.double.mccmd": "#FFA500",
+      "keyword.control.mccmd": "#9933FF",
+      "support.type.mccmd": "#008000",
+      "constant.numeric.mccmd": "#0000FF",
+      "constant.language.boolean.mccmd": "#0000FF",
+      "comment.line.double-slash.mccmd": "#FF0000"
+    }
+  }
+  

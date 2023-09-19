@@ -1,0 +1,25 @@
+{
+  "name": "mccmd-on-vscode",
+  "displayName": "mcCmd on vscode",
+  "description": "run mcCMd on vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "mccmd",
+      "aliases": ["mcCmd", "mccmd"],
+      "extensions": ["mcCmd"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "mccmd",
+      "scopeName": "source.mccmd",
+      "path": "./syntaxes/mccmd.tmLanguage.json"
+    }]
+  }
+}
